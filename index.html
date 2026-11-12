@@ -59,41 +59,41 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
 
   <div class="intro">
     <p>I study computer science at the Karlsruhe Institute of Technology and write software at <a href="https://traggert.com">Traggert</a>, a startup, at <a href="https://pioniergarage.de">PionierGarage</a>, KIT's entrepreneurship club, and at Delta, a student consulting group.</p>
-    <p>On my own time I build small tools for specific people. The one I care about most is <a href="https://github.com/AlparslanSemiz/Mozaik">Mozaik</a>: my father lays out the weekly timetable for his course by hand every term, so I wrote him a program that does about half of what the expensive one does — and tries to do that half better.</p>
+    <p>On my own time I build small tools for specific people. The one I care about most is <a href="https://github.com/AlparslanSemiz/Mozaik">Mozaik</a>: my father lays out the weekly timetable for his course by hand every term, so I wrote him a program that does about half of what the expensive one does, and tries to do that half better.</p>
   </div>
 
   <section>
     <h2>Now</h2>
-    <p class="now">Fifth semester. Full-stack work at Traggert. On the side, replacing the Mac utilities that stopped working for me — a Touch Bar app because Pock kept going blank, and an app that quits programs when their last window closes.</p>
+    <p class="now">Fifth semester. Full-stack work at Traggert. On the side, replacing the Mac utilities that stopped working for me: a Touch Bar app because Pock kept going blank, and an app that quits programs when their last window closes.</p>
   </section>
 
   <section>
     <h2>Experience</h2>
     <ul class="rows">
       <li class="row">
-        <div class="when mono">Aug 2026 — now</div>
+        <div class="when mono">Aug 2026 - Present</div>
         <div class="what"><b>Full-Stack Developer</b> <span class="org">· Traggert</span>
           <p>Startup in Karlsruhe. Backend, web and the mobile app.</p></div>
       </li>
       <li class="row">
-        <div class="when mono">Apr 2026 — now</div>
+        <div class="when mono">Apr 2026 - Present</div>
         <div class="what"><b>Developer</b> <span class="org">· PionierGarage</span>
           <p>KIT's student entrepreneurship club.</p></div>
       </li>
       <li class="row">
-        <div class="when mono">Oct 2025 — now</div>
+        <div class="when mono">Oct 2025 - Present</div>
         <div class="what"><b>Developer</b> <span class="org">· Delta</span>
           <p>Student consulting group at KIT (studentische Unternehmensberatung). In a team of three I built <a href="https://github.com/AlparslanSemiz/InvoiceFlow">InvoiceFlow</a>, Delta's internal invoicing app: configurable forms, tRPC APIs, PDF export, Factur-X XML, archival snapshots and sequential invoice numbers.</p>
           <div class="meta mono">Next.js · tRPC · Prisma · PostgreSQL</div></div>
       </li>
       <li class="row">
-        <div class="when mono">May 2026 — now</div>
+        <div class="when mono">May 2026 - Present</div>
         <div class="what"><b><a href="https://github.com/AlparslanSemiz/rate-my-professor">RateMyProf</a></b> <span class="org">· KIT software engineering course, team of 6</span>
-          <p>A professor-rating platform for KIT: Android app, Spring Boot API and a web admin panel. I built the admin panel — dashboards, users, bug reports, moderation, typed REST services with token auth — and added settings features to the Android app.</p>
+          <p>A professor-rating platform for KIT: Android app, Spring Boot API and a web admin panel. I built the admin panel (dashboards, users, bug reports, moderation, typed REST services with token auth) and added settings features to the Android app.</p>
           <div class="meta mono">React · TypeScript · Mantine · Java · Android</div></div>
       </li>
       <li class="row">
-        <div class="when mono">Mar 2026 — now</div>
+        <div class="when mono">Mar 2026 - Present</div>
         <div class="what"><b>I Am In The Library</b> <span class="org">· team of 3</span>
           <p>A social app that shows which friends are in the library right now, with geofenced check-in and check-out. I worked on settings, notifications, theming, bug reports, profiles and the admin side.</p>
           <div class="meta mono">React Native · Expo · Supabase · PostGIS</div></div>
@@ -123,7 +123,7 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
 
   <section class="plain">
     <h2>Education &amp; languages</h2>
-    <p><b>B.Sc. Computer Science (Informatik)</b>, Karlsruhe Institute of Technology, since October 2024 — focus on AI and software engineering.</p>
+    <p><b>B.Sc. Computer Science (Informatik)</b>, Karlsruhe Institute of Technology, since October 2024, with a focus on AI and software engineering.</p>
     <p style="margin-top:8px"><b>German Abitur</b>, Istanbul Erkek Lisesi, 2024. Before that, first place nationwide in Turkey's high-school entrance exam (LGS 2019), out of about a million candidates.</p>
     <p style="margin-top:8px"><b>Volunteering:</b> mentor at Noctisol, helping international students make their way to Germany.</p>
     <p style="margin-top:8px"><b>Languages:</b> Turkish (native), German (C2), English (C1), Spanish (A1).</p>
@@ -140,7 +140,7 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
   </section>
 
   <footer>
-    <span>Written by hand — HTML and CSS, no framework. Set in Inter and JetBrains Mono.</span>
+    <span>Written by hand in HTML and CSS, no framework. Set in Inter and JetBrains Mono.</span>
     <span>Karlsruhe, 2026</span>
   </footer>
 </main>
@@ -148,7 +148,7 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
 document.querySelectorAll('button.copy').forEach(function(b){
   var addr=b.dataset.u+'@'+b.dataset.d;
   b.addEventListener('click',function(){
-    var done=function(){b.textContent='Copied — '+addr;setTimeout(function(){b.textContent='Email'},2400)};
+    var done=function(){b.textContent='Copied: '+addr;setTimeout(function(){b.textContent='Email'},2400)};
     if(navigator.clipboard){navigator.clipboard.writeText(addr).then(done,function(){location.href='mailto:'+addr})}else{location.href='mailto:'+addr}
   });
 });
