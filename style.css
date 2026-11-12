@@ -1,0 +1,90 @@
+/* Shared by index.html and cv.html. One column, one grid, one set of type sizes. */
+:root{
+  --bg:#fbfaf8; --paper:#ffffff; --ink:#1b1a18; --muted:#66615a; --faint:#9c978e; --line:#e7e3dc;
+  --accent:#c2410c; --chip:#f2eee8;
+  --date:146px; --gap:22px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121211; --paper:#171716; --ink:#ecebe7; --muted:#a19c92; --faint:#6d6961; --line:#272624; --accent:#fb923c; --chip:#211f1d;
+}}
+:root[data-theme="dark"]{
+  --bg:#121211; --paper:#171716; --ink:#ecebe7; --muted:#a19c92; --faint:#6d6961; --line:#272624; --accent:#fb923c; --chip:#211f1d;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:15px/1.65 Inter,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:740px;margin:0 auto;padding:0 20px}
+
+a{color:inherit;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px;transition:text-decoration-color .15s}
+a:hover{text-decoration-color:var(--accent)}
+.mono{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,monospace;font-size:12.5px;color:var(--faint)}
+
+/* top bar, identical on both pages */
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:40px 0 0}
+.top .name{font-weight:600;text-decoration:none}
+.top nav{display:flex;gap:20px;font-size:14px}
+.top nav a{color:var(--muted);text-decoration:none}
+.top nav a:hover,.top nav a[aria-current]{color:var(--ink)}
+
+/* page heading */
+.lead{padding:56px 0 8px}
+.lead h1{font-size:28px;line-height:1.25;font-weight:600;letter-spacing:-.015em}
+.lead .sub{color:var(--muted);margin-top:6px}
+.lead p{margin-top:16px;max-width:62ch}
+.lead p+p{margin-top:12px}
+
+/* sections */
+section{padding-top:48px}
+h2{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);
+   padding-bottom:10px;margin-bottom:6px;border-bottom:1px solid var(--line)}
+
+/* the one row layout: date on the left, content on the right */
+.row{display:grid;grid-template-columns:var(--date) 1fr;gap:2px var(--gap);padding:14px 0}
+.row + .row{border-top:1px solid var(--line)}
+.row .when{padding-top:2px}
+.row h3{font-size:15px;font-weight:600;line-height:1.45}
+.row h3 .at{font-weight:400;color:var(--muted)}
+.row p,.row li{color:var(--muted)}
+.row p{margin-top:3px}
+.row ul{margin:6px 0 0 18px}
+.row li+li{margin-top:2px}
+.row .tags{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px}
+.row .tags span{font-family:"JetBrains Mono",monospace;font-size:11.5px;background:var(--chip);color:var(--muted);padding:3px 8px;border-radius:6px}
+
+.note{background:var(--chip);border-radius:10px;padding:14px 16px;margin-top:14px}
+
+/* key/value list (skills, languages) */
+.kv{display:grid;grid-template-columns:var(--date) 1fr;gap:8px var(--gap);padding-top:12px}
+.kv dt{font-family:"JetBrains Mono",monospace;font-size:12.5px;color:var(--faint);padding-top:2px}
+.kv dd{color:var(--ink)}
+
+.links{display:flex;flex-wrap:wrap;gap:8px 22px;padding-top:12px}
+button.link{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+button.link:hover{text-decoration-color:var(--accent)}
+
+footer{margin-top:72px;padding:20px 0 48px;border-top:1px solid var(--line);color:var(--faint);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+.print{font-size:14px}
+@media (max-width:600px){
+  :root{--date:1fr}
+  .row,.kv{grid-template-columns:1fr;gap:0}
+  .kv dd{margin-bottom:8px}
+  .lead{padding-top:40px}
+  .top nav{gap:14px}
+}
+
+@media print{
+  @page{size:A4;margin:14mm 15mm}
+  :root{--bg:#fff;--paper:#fff;--ink:#111;--muted:#3f3c38;--faint:#6d6961;--line:#dedad3;--accent:#9a3412;--chip:#f3f0eb;--date:33mm}
+  .mono,.kv dt{font-size:8pt}
+  .row h3{font-size:10.5pt}
+  body{font-size:9.6pt;line-height:1.45;background:#fff}
+  .wrap{max-width:none;padding:0}
+  .top,.no-print,footer{display:none}
+  .lead{padding:10px 0 0}
+  .lead h1{font-size:19pt}
+  section{padding-top:14px;break-inside:auto}
+  .row{padding:6px 0;break-inside:avoid}
+  .row .tags span{background:none;padding:0;margin-right:4px}
+  a{text-decoration:none}
+}
