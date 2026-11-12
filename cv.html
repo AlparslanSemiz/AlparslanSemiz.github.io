@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV — Alparslan Semiz</title>
+<meta name="description" content="CV of Alparslan Semiz — computer science student at KIT, developer at Traggert and PionierGarage.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbfaf8;--paper:#fff;--ink:#1c1b19;--muted:#5f5a52;--faint:#9a958c;--line:#e6e2da;--accent:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121211;--paper:#181817;--ink:#ecebe8;--muted:#a29e94;--faint:#6f6b63;--line:#2a2927;--accent:#fb923c}}
+:root[data-theme="dark"]{--bg:#121211;--paper:#181817;--ink:#ecebe8;--muted:#a29e94;--faint:#6f6b63;--line:#2a2927;--accent:#fb923c}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:13.5px/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.bar{max-width:780px;margin:24px auto 0;padding:0 20px;display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}
+.bar a,.bar button{color:inherit;font:inherit;background:none;border:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)}
+.page{max-width:780px;margin:16px auto 48px;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:48px 52px}
+a{color:inherit;text-underline-offset:2px;text-decoration-color:var(--line)}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:11.5px;color:var(--faint)}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;padding-bottom:18px;border-bottom:1px solid var(--line)}
+h1{font-size:24px;font-weight:600;letter-spacing:-.01em}
+header .role{color:var(--muted);margin-top:2px}
+header .links{text-align:right;color:var(--muted);font-size:12.5px;line-height:1.7}
+section{margin-top:22px}
+h2{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.row{display:grid;grid-template-columns:118px 1fr;gap:2px 18px;padding:6px 0}
+.row b{font-weight:600}
+.row .org{color:var(--muted)}
+.row p{color:var(--muted)}
+.row ul{margin:3px 0 0 16px;color:var(--muted)}
+.row .tech{margin-top:2px}
+.skills{display:grid;grid-template-columns:118px 1fr;gap:4px 18px}
+.skills dt{color:var(--faint);font-family:"JetBrains Mono",monospace;font-size:11.5px;padding-top:2px}
+.skills dd{color:var(--ink)}
+@media (max-width:620px){.page{padding:28px 20px;border-radius:0;border-left:0;border-right:0}.row,.skills{grid-template-columns:1fr;gap:0}header .links{text-align:left}}
+@media print{
+  @page{size:A4;margin:14mm 14mm}
+  :root{--bg:#fff;--paper:#fff;--ink:#111;--muted:#444;--faint:#777;--line:#ddd;--accent:#9a3412}
+  body{font-size:10.5pt;background:#fff}
+  .bar{display:none}
+  .page{border:0;padding:0;margin:0;max-width:none}
+  a{text-decoration:none}
+  section{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="bar"><a href="./">← alparslansemiz.github.io</a><button onclick="window.print()">Print / save as PDF</button></div>
+<article class="page">
+  <header>
+    <div>
+      <h1>Alparslan Semiz</h1>
+      <div class="role">Computer science student · Software developer · Karlsruhe, Germany</div>
+    </div>
+    <div class="links">
+      <a href="mailto:alparslansemiz@outlook.com">alparslansemiz@outlook.com</a><br>
+      <a href="https://github.com/AlparslanSemiz">github.com/AlparslanSemiz</a><br>
+      <a href="https://alparslansemiz.github.io">alparslansemiz.github.io</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="row"><div class="mono">2026 — now</div><div><b>Software Developer</b> <span class="org">· Traggert, Karlsruhe</span><p>Startup. Mobile app development in Flutter.</p></div></div>
+    <div class="row"><div class="mono">now</div><div><b>Developer</b> <span class="org">· PionierGarage e.V., KIT</span><p>Student entrepreneurship club at the Karlsruhe Institute of Technology.</p></div></div>
+  </section>
+
+  <section>
+    <h2>Team projects</h2>
+    <div class="row"><div class="mono">May — Sep 2026</div><div><b>Rate My Professor</b> <span class="org">· KIT software engineering project (PSE), team of 6</span>
+      <ul><li>Lecture- and professor-rating platform: Android app, REST API and web admin panel, deployed for students.</li>
+      <li>Built most of the React admin panel: moderation of users and content, bug reports to GitLab issues, an audit log with undo.</li>
+      <li>Wrote about half of the Spring Boot backend: sessions for app and panel, moderation and audit endpoints.</li></ul>
+      <div class="tech mono">Spring Boot 4 · Java 21 · PostgreSQL · Flyway · React 19 · TypeScript · Android · Docker</div></div></div>
+    <div class="row"><div class="mono">2026</div><div><b>InvoiceFlow</b> <span class="org">· Delta Hochschulgruppe, KIT, team of 4</span>
+      <ul><li>Invoice management system for PDF and XML invoices; XML-driven UI fields, data logic and PDF layouts.</li></ul>
+      <div class="tech mono">Next.js · TypeScript · Tailwind CSS</div></div></div>
+    <div class="row"><div class="mono">Apr 2026</div><div><b>GAMEJAM</b> <span class="org">· 48-hour game jam, team of 5</span>
+      <ul><li>2D platformer with a flashlight-and-darkness mechanic; level scenes, player code and final integration.</li></ul>
+      <div class="tech mono">Godot · GDScript</div></div></div>
+  </section>
+
+  <section>
+    <h2>Selected projects</h2>
+    <div class="row"><div class="mono">TypeScript</div><div><b>Mozaik</b> — offline, single-file school timetable builder in five languages, used to plan a private course's week. 600+ commits.</div></div>
+    <div class="row"><div class="mono">Swift</div><div><b>Şerit</b> and <b>Veda</b> — macOS utilities: a self-healing Touch Bar, and an agent that quits apps when their last window closes.</div></div>
+    <div class="row"><div class="mono">Next.js</div><div><b>Mail Triage Bot</b> — Gemini classifies Outlook mail; urgent mail and twice-daily digests go to Telegram.</div></div>
+    <div class="row"><div class="mono">FastAPI · React</div><div><b>GameMetrix</b> — game decision catalog with a PostgreSQL backend and a server-rendered frontend.</div></div>
+    <div class="row"><div class="mono">Godot</div><div><b>Godot Mobile Template</b> — mobile game starter with headless tests and smoke runs in CI.</div></div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="row"><div class="mono">2024 — now</div><div><b>B.Sc. Computer Science (Informatik)</b> <span class="org">· Karlsruhe Institute of Technology</span><p>5th semester.</p></div></div>
+  </section>
+
+  <section>
+    <h2>Skills &amp; languages</h2>
+    <dl class="skills">
+      <dt>Languages</dt><dd>TypeScript, Java, Python, Swift, Dart, GDScript</dd>
+      <dt>Frameworks</dt><dd>React, Next.js, Spring Boot, FastAPI, Flutter, Android, Godot</dd>
+      <dt>Tools</dt><dd>PostgreSQL, Docker, Git, GitHub Actions, GitLab CI, Playwright</dd>
+      <dt>Spoken</dt><dd>Turkish (native), German, English, a little Spanish</dd>
+    </dl>
+  </section>
+</article>
+</body>
+</html>

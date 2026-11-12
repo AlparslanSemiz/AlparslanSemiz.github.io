@@ -4,216 +4,145 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Alparslan Semiz</title>
-<meta name="description" content="Developer in Karlsruhe. Small, sharp tools for real people — timetables, inbox triage, macOS utilities.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23d9573f'/><text x='50' y='68' font-size='52' font-family='Georgia,serif' text-anchor='middle' fill='white'>A</text></svg>">
+<meta name="description" content="Computer science student at KIT and developer at Traggert and PionierGarage. I build small tools for specific people.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23c2410c'/><text x='50' y='69' font-size='56' font-family='Georgia,serif' text-anchor='middle' fill='white'>a</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#f6f3ee; --surface:#fffdf9; --ink:#1d1b18; --muted:#6b655c; --line:#e4ddd2;
-  --accent:#d9573f; --accent-soft:#f6e1da; --chip:#efe9df;
-  --shadow:0 1px 2px rgba(40,30,20,.05),0 8px 24px -12px rgba(40,30,20,.18);
+:root{--bg:#fbfaf8;--ink:#1c1b19;--muted:#6f6a62;--faint:#a39e95;--line:#e8e4dd;--accent:#c2410c;--hl:#fdf0e6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121211;--ink:#ecebe8;--muted:#9d998f;--faint:#6b675f;--line:#262523;--accent:#fb923c;--hl:#2a1d14}}
+:root[data-theme="dark"]{--bg:#121211;--ink:#ecebe8;--muted:#9d998f;--faint:#6b675f;--line:#262523;--accent:#fb923c;--hl:#2a1d14}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+main{max-width:680px;margin:0 auto;padding:72px 20px 56px}
+a{color:inherit;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px;transition:text-decoration-color .15s}
+a:hover{text-decoration-color:var(--accent)}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12.5px;color:var(--faint)}
+header h1{font-size:16px;font-weight:600}
+header .sub{color:var(--muted)}
+.intro{margin-top:28px}
+.intro p+p{margin-top:12px}
+section{margin-top:52px}
+h2{font-size:13px;font-weight:500;color:var(--muted);margin-bottom:16px}
+.now{background:var(--hl);border-radius:8px;padding:14px 16px;color:var(--ink)}
+.rows{list-style:none}
+.row{display:grid;grid-template-columns:116px 1fr;gap:4px 20px;padding:10px 0}
+.row .when{padding-top:2px}
+.row .what b{font-weight:500}
+.row .what .org{color:var(--muted)}
+.row .what p{color:var(--muted);margin-top:2px}
+.row .what .meta{margin-top:4px}
+.projects li{list-style:none;padding:7px 0;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.projects li a{font-weight:500}
+.projects li span.d{color:var(--muted)}
+.projects li .mono{margin-left:auto;white-space:nowrap}
+.plain p{color:var(--muted)}
+.plain p b{color:var(--ink);font-weight:500}
+.contact{display:flex;flex-wrap:wrap;gap:8px 22px}
+button.copy{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+button.copy:hover{text-decoration-color:var(--accent)}
+footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:var(--faint);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:560px){
+  main{padding-top:48px}
+  .row{grid-template-columns:1fr;gap:0}
+  .projects li .mono{margin-left:0;width:100%}
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#141312; --surface:#1c1a18; --ink:#f0ebe3; --muted:#a59d91; --line:#2e2a26;
-  --accent:#f0785f; --accent-soft:#3a221c; --chip:#26231f;
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
-}}
-:root[data-theme="dark"]{
-  --bg:#141312; --surface:#1c1a18; --ink:#f0ebe3; --muted:#a59d91; --line:#2e2a26;
-  --accent:#f0785f; --accent-soft:#3a221c; --chip:#26231f;
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
-}
-*{box-sizing:border-box;margin:0}
-html{-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-header.top{display:flex;justify-content:space-between;align-items:center;padding:28px 0}
-.mark{font:650 18px/1 Fraunces,Georgia,serif;text-decoration:none;letter-spacing:-.01em}
-.mark span{color:var(--accent)}
-nav a{font-size:14px;color:var(--muted);text-decoration:none;margin-left:22px}
-nav a:hover{color:var(--ink)}
-.hero{padding:72px 0 56px;border-bottom:1px solid var(--line)}
-.eyebrow{font:500 13px/1 "JetBrains Mono",monospace;color:var(--accent);letter-spacing:.04em;text-transform:uppercase}
-h1{font:500 clamp(38px,6.4vw,68px)/1.04 Fraunces,Georgia,serif;letter-spacing:-.025em;margin:18px 0 22px;max-width:15ch}
-h1 em{font-style:italic;color:var(--accent)}
-.lede{font-size:clamp(17px,2vw,19px);color:var(--muted);max-width:56ch}
-.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;font-weight:500;font-size:15px;text-decoration:none;border:1px solid var(--line);background:var(--surface)}
-.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.btn:hover{transform:translateY(-1px)}
-section{padding:64px 0}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:28px;flex-wrap:wrap}
-h2{font:500 30px/1.15 Fraunces,Georgia,serif;letter-spacing:-.015em}
-.sec-head p{color:var(--muted);font-size:15px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
-.card{position:relative;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow);text-decoration:none;transition:transform .18s,border-color .18s}
-.card:hover{transform:translateY(-3px);border-color:var(--accent)}
-.card.feature{grid-column:1/-1;display:grid;grid-template-columns:1.3fr 1fr;gap:28px;padding:32px}
-.card .k{font:500 12px/1 "JetBrains Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-.card h3{font:600 22px/1.2 Fraunces,Georgia,serif;margin:10px 0 8px;letter-spacing:-.01em}
-.card.feature h3{font-size:34px}
-.card p{color:var(--muted);font-size:15px}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:18px}
-.tags span{font:500 12px/1 "JetBrains Mono",monospace;background:var(--chip);padding:6px 9px;border-radius:7px;color:var(--ink)}
-.arrow{position:absolute;top:22px;right:22px;color:var(--muted);font-size:18px;transition:transform .18s,color .18s}
-.card:hover .arrow{transform:translate(3px,-3px);color:var(--accent)}
-.feature .facts{display:grid;gap:10px;align-content:start;border-left:1px solid var(--line);padding-left:28px}
-.facts div{display:flex;gap:10px;font-size:15px}
-.facts b{font:500 13px/1.6 "JetBrains Mono",monospace;color:var(--accent);min-width:22px}
-.stack{display:flex;flex-wrap:wrap;gap:10px}
-.stack span{padding:9px 14px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:14px}
-footer{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-@media (max-width:720px){
-  .card.feature{grid-template-columns:1fr;padding:24px}
-  .feature .facts{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:18px}
-  .card.feature h3{font-size:28px}
-  nav a{margin-left:14px}
-  .hero{padding:48px 0 40px}
-}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header class="top">
-    <a class="mark" href="#">Alparslan<span>.</span></a>
-    <nav><a href="#work">Work</a><a href="#team">Team</a><a href="#stack">Stack</a><a href="https://github.com/AlparslanSemiz">GitHub</a></nav>
+<main>
+  <header>
+    <h1>Alparslan Semiz</h1>
+    <div class="sub">Computer science at KIT · Developer at Traggert and PionierGarage · Karlsruhe</div>
   </header>
 
-  <div class="hero">
-    <div class="eyebrow">Developer · Karlsruhe</div>
-    <h1>Small, sharp tools for <em>real</em> people.</h1>
-    <p class="lede">I'm a developer at a startup and at <a href="https://pioniergarage.de">PionierGarage</a>, KIT's entrepreneurship club. On the side I build software that answers to someone specific — a timetable app for my father's course, a bot that reads my inbox so I don't have to, a macOS utility when the existing ones stopped working.</p>
-    <div class="cta">
-      <a class="btn primary" href="#work">See the work ↓</a>
-      <a class="btn" href="https://github.com/AlparslanSemiz">GitHub profile ↗</a>
-    </div>
+  <div class="intro">
+    <p>I study computer science at the Karlsruhe Institute of Technology and write software at <a href="https://traggert.com">Traggert</a>, a startup, and at <a href="https://pioniergarage.de">PionierGarage</a>, KIT's entrepreneurship club.</p>
+    <p>On my own time I build small tools for specific people. The one I care about most is <a href="https://github.com/AlparslanSemiz/Mozaik">Mozaik</a>: my father lays out the weekly timetable for his course by hand every term, so I wrote him a program that does about half of what the expensive one does — and tries to do that half better.</p>
   </div>
 
-  <section id="work">
-    <div class="sec-head"><h2>Selected work</h2><p>Solo projects, all open source.</p></div>
-    <div class="grid">
-
-      <a class="card feature" href="https://github.com/AlparslanSemiz/Mozaik">
-        <span class="arrow">↗</span>
-        <div>
-          <div class="k">Featured · TypeScript</div>
-          <h3>Mozaik</h3>
-          <p>A single-file school timetable builder that replaces aSc Timetables for one private course. It does about half of what aSc does — and aims to do that half better. No installer, no server, no account; works offline in five languages.</p>
-          <div class="tags"><span>TypeScript</span><span>offline-first</span><span>single-file</span><span>i18n</span></div>
-        </div>
-        <div class="facts">
-          <div><b>01</b><span>Built for one real user: my father, who lays out the timetable by hand every term.</span></div>
-          <div><b>02</b><span>Ships as one HTML file, a Windows .exe and a web app.</span></div>
-          <div><b>03</b><span>600+ commits of iteration on a single focused problem.</span></div>
-        </div>
-      </a>
-
-      <a class="card" href="https://github.com/AlparslanSemiz/Gamemetrix">
-        <span class="arrow">↗</span>
-        <div class="k">Full-stack</div>
-        <h3>GameMetrix</h3>
-        <p>A game decision catalog: FastAPI and PostgreSQL behind a server-rendered React Router frontend, with a scoring pipeline and background jobs.</p>
-        <div class="tags"><span>FastAPI</span><span>PostgreSQL</span><span>React</span><span>Docker</span></div>
-      </a>
-
-      <a class="card" href="https://github.com/AlparslanSemiz/mail-triage-bot">
-        <span class="arrow">↗</span>
-        <div class="k">AI · Automation</div>
-        <h3>Mail Triage Bot</h3>
-        <p>Polls Outlook hourly, lets Gemini classify each new mail, pings Telegram for anything urgent and sends a digest at 09:00 and 18:00.</p>
-        <div class="tags"><span>Next.js</span><span>Gemini</span><span>MS Graph</span><span>Telegram</span></div>
-      </a>
-
-      <a class="card" href="https://github.com/AlparslanSemiz/godot-mobile-template">
-        <span class="arrow">↗</span>
-        <div class="k">Godot · Template</div>
-        <h3>Godot Mobile Template</h3>
-        <p>A production-ready starting point for mobile games in Godot 4.7: frame pacing tuned on a 120 Hz phone, headless lint, unit and smoke tests in CI, AdMob and Play Billing behind switches.</p>
-        <div class="tags"><span>Godot</span><span>GDScript</span><span>GitHub Actions</span></div>
-      </a>
-
-      <a class="card" href="https://github.com/AlparslanSemiz/Serit">
-        <span class="arrow">↗</span>
-        <div class="k">macOS · Touch Bar</div>
-        <h3>Şerit</h3>
-        <p>A self-healing Touch Bar: a real dock with badges, now playing (YouTube Music included), press-and-slide volume and brightness, weather. Written because Pock kept going blank.</p>
-        <div class="tags"><span>Swift</span><span>private APIs</span><span>AppKit</span></div>
-      </a>
-
-      <a class="card" href="https://github.com/AlparslanSemiz/Veda">
-        <span class="arrow">↗</span>
-        <div class="k">macOS · Swift</div>
-        <h3>Veda</h3>
-        <p>Quits a Mac app when its last window closes — like Windows does. Built when Swift Quit and Last Window Quits broke on new macOS; tells closed, minimized and other-Space windows apart.</p>
-        <div class="tags"><span>Swift</span><span>AppKit</span><span>Accessibility API</span></div>
-      </a>
-
-
-      <a class="card" href="https://github.com/AlparslanSemiz/priceSniper">
-        <span class="arrow">↗</span>
-        <div class="k">Python · Scraping</div>
-        <h3>PriceSniper</h3>
-        <p>Tracks electronics prices on Geizhals.de and Kleinanzeigen.de with Playwright, on a schedule, and raises alerts when a product drops into range.</p>
-        <div class="tags"><span>Python</span><span>Playwright</span><span>APScheduler</span></div>
-      </a>
-
-      <a class="card" href="https://github.com/AlparslanSemiz/namaz-vakti-widget">
-        <span class="arrow">↗</span>
-        <div class="k">Widget</div>
-        <h3>Namaz Vakti</h3>
-        <p>A macOS/iOS widget that shows prayer times for wherever you are, with one network request a day and no API keys.</p>
-        <div class="tags"><span>JavaScript</span><span>ScriptWidget</span></div>
-      </a>
-
-    </div>
+  <section>
+    <h2>Now</h2>
+    <p class="now">Fifth semester. Working on the mobile app at Traggert. On the side, replacing the Mac utilities that stopped working for me — a Touch Bar app because Pock kept going blank, and an app that quits programs when their last window closes.</p>
   </section>
 
-  <section id="team">
-    <div class="sec-head"><h2>Team projects</h2><p>Built with others — at university, a game jam and a student group.</p></div>
-    <div class="grid">
-
-      <a class="card" href="https://github.com/AlparslanSemiz/rate-my-professor">
-        <span class="arrow">↗</span>
-        <div class="k">KIT PSE · team of 6</div>
-        <h3>Rate My Professor</h3>
-        <p>A lecture- and professor-rating platform for KIT students: Android app, Spring Boot API and a moderation panel with an audit log and undo. I built most of the React admin panel and about half of the backend.</p>
-        <div class="tags"><span>Android</span><span>Spring Boot</span><span>React</span><span>PostgreSQL</span></div>
-      </a>
-
-      <a class="card" href="https://github.com/AlparslanSemiz/GAMEJAM">
-        <span class="arrow">↗</span>
-        <div class="k">Game jam · 48 hours · team of 5</div>
-        <h3>GAMEJAM</h3>
-        <p>A dark-forest escape platformer made in one weekend: a flashlight with limited energy, darkness checkpoints, dash, double and wall jumps, and something chasing you.</p>
-        <div class="tags"><span>Godot</span><span>GDScript</span><span>pixel art</span></div>
-      </a>
-
-      <a class="card" href="https://github.com/AlparslanSemiz/InvoiceFlow">
-        <span class="arrow">↗</span>
-        <div class="k">Delta Hochschulgruppe · team of 4</div>
-        <h3>InvoiceFlow</h3>
-        <p>Full-stack invoice management (PDF and XML) built in a four-person team at Delta Hochschulgruppe. I worked on XML-driven UI, data logic and PDF layouts.</p>
-        <div class="tags"><span>T3 Stack</span><span>Next.js</span><span>Tailwind</span></div>
-      </a>
-
-    </div>
+  <section>
+    <h2>Experience</h2>
+    <ul class="rows">
+      <li class="row">
+        <div class="when mono">2026 — now</div>
+        <div class="what"><b>Software Developer</b> <span class="org">· Traggert</span>
+          <p>Startup in Karlsruhe. Mobile app development in Flutter.</p></div>
+      </li>
+      <li class="row">
+        <div class="when mono">now</div>
+        <div class="what"><b>Developer</b> <span class="org">· PionierGarage</span>
+          <p>KIT's student entrepreneurship club.</p></div>
+      </li>
+      <li class="row">
+        <div class="when mono">May — Sep 2026</div>
+        <div class="what"><b><a href="https://github.com/AlparslanSemiz/rate-my-professor">Rate My Professor</a></b> <span class="org">· KIT software engineering project, team of 6</span>
+          <p>A lecture-rating platform: Android app, Spring Boot API, React admin panel. I built most of the admin panel — moderation, an audit log with undo — and about half of the backend.</p>
+          <div class="meta mono">Spring Boot · Java 21 · PostgreSQL · React · Android</div></div>
+      </li>
+      <li class="row">
+        <div class="when mono">2026</div>
+        <div class="what"><b><a href="https://github.com/AlparslanSemiz/InvoiceFlow">InvoiceFlow</a></b> <span class="org">· Delta Hochschulgruppe, team of 4</span>
+          <p>Invoice management for PDF and XML invoices. I worked on the XML-driven forms, the data logic and the PDF layouts.</p>
+          <div class="meta mono">Next.js · TypeScript · Tailwind</div></div>
+      </li>
+      <li class="row">
+        <div class="when mono">Apr 2026</div>
+        <div class="what"><b><a href="https://github.com/AlparslanSemiz/GAMEJAM">GAMEJAM</a></b> <span class="org">· 48-hour game jam, team of 5</span>
+          <p>A platformer in a dark forest where your flashlight is the main mechanic. I worked on the level scenes, the player code and the final integration.</p>
+          <div class="meta mono">Godot · GDScript</div></div>
+      </li>
+    </ul>
   </section>
 
-  <section id="stack">
-    <div class="sec-head"><h2>What I work with</h2></div>
-    <div class="stack">
-      <span>TypeScript</span><span>Python</span><span>Swift</span><span>Java</span><span>React</span><span>Next.js</span><span>Spring Boot</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span><span>Playwright</span><span>Godot</span><span>Unity</span>
+  <section>
+    <h2>Things I made</h2>
+    <ul class="projects">
+      <li><a href="https://github.com/AlparslanSemiz/Mozaik">Mozaik</a><span class="d">Offline timetable builder in one HTML file. 600+ commits.</span><span class="mono">TypeScript</span></li>
+      <li><a href="https://github.com/AlparslanSemiz/Serit">Şerit</a><span class="d">A Touch Bar that doesn't go blank: dock, now playing, sliders.</span><span class="mono">Swift</span></li>
+      <li><a href="https://github.com/AlparslanSemiz/Veda">Veda</a><span class="d">Quits Mac apps when their last window closes.</span><span class="mono">Swift</span></li>
+      <li><a href="https://github.com/AlparslanSemiz/mail-triage-bot">Mail Triage Bot</a><span class="d">Gemini sorts my inbox, Telegram tells me what's urgent.</span><span class="mono">Next.js</span></li>
+      <li><a href="https://github.com/AlparslanSemiz/Gamemetrix">GameMetrix</a><span class="d">A catalog that helps you decide what to play next.</span><span class="mono">FastAPI · React</span></li>
+      <li><a href="https://github.com/AlparslanSemiz/godot-mobile-template">Godot Mobile Template</a><span class="d">Mobile game starter with tests that run in CI.</span><span class="mono">Godot</span></li>
+      <li><a href="https://github.com/AlparslanSemiz/priceSniper">PriceSniper</a><span class="d">Watches electronics prices on Geizhals and Kleinanzeigen.</span><span class="mono">Python</span></li>
+      <li><a href="https://github.com/AlparslanSemiz/namaz-vakti-widget">Namaz Vakti</a><span class="d">Prayer times widget, one request a day.</span><span class="mono">JavaScript</span></li>
+    </ul>
+  </section>
+
+  <section class="plain">
+    <h2>Education &amp; languages</h2>
+    <p><b>B.Sc. Computer Science (Informatik)</b>, Karlsruhe Institute of Technology, since 2024.</p>
+    <p style="margin-top:8px"><b>Languages:</b> Turkish (native), German, English, a little Spanish.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <div class="contact">
+      <button class="copy" data-u="alparslansemiz" data-d="outlook.com" title="Copy email">Email</button>
+      <a href="https://github.com/AlparslanSemiz">GitHub</a>
+      <a href="cv.html">CV</a>
     </div>
   </section>
 
   <footer>
-    <span>© 2026 Alparslan Semiz</span>
-    <a href="https://github.com/AlparslanSemiz">github.com/AlparslanSemiz</a>
+    <span>Written by hand — HTML and CSS, no framework. Set in Inter and JetBrains Mono.</span>
+    <span>Karlsruhe, 2026</span>
   </footer>
-</div>
+</main>
+<script>
+document.querySelectorAll('button.copy').forEach(function(b){
+  var addr=b.dataset.u+'@'+b.dataset.d;
+  b.addEventListener('click',function(){
+    var done=function(){b.textContent='Copied — '+addr;setTimeout(function(){b.textContent='Email'},2400)};
+    if(navigator.clipboard){navigator.clipboard.writeText(addr).then(done,function(){location.href='mailto:'+addr})}else{location.href='mailto:'+addr}
+  });
+});
+</script>
 </body>
 </html>
