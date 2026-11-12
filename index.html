@@ -12,8 +12,9 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<button class="save" onclick="window.print()">Save as PDF</button>
+<div class="tools"><button data-set="en">EN</button><button data-set="de">DE</button><button class="pdf" onclick="window.print()">PDF</button></div>
 <div class="wrap">
+<div class="cv" lang="en">
   <header class="cv-head">
     <div>
       <h1>Muhammet Alparslan Semiz</h1>
@@ -27,17 +28,17 @@
     </div>
   </header>
 
-  <p class="summary">Computer science student at KIT and part-time full-stack developer at Traggert. I work across web, mobile and backend: TypeScript, React and Next.js; Java and Spring Boot; Python and FastAPI.</p>
+  <p class="summary">Computer science student at KIT and working student (Werkstudent) at Traggert. I work across backend, frontend and DevOps: TypeScript, React and Next.js; Java and Spring Boot; Python and FastAPI.</p>
 
   <section>
     <h2>Work experience</h2>
     <div class="row">
       <div class="when mono">Aug 2026 - Present</div>
-      <div><h3>Full-Stack Developer, part-time <span class="at">· Traggert, Karlsruhe</span></h3>
-        <p>Startup. Backend, web frontend and the mobile app.</p></div>
+      <div><h3>Full-Stack Developer, working student <span class="at">· Traggert, Karlsruhe</span></h3>
+        <p>Startup. Backend, frontend and DevOps.</p></div>
     </div>
     <div class="row">
-      <div class="when mono">Ongoing</div>
+      <div class="when mono">May 2026 - Present</div>
       <div><h3>Website and IT <span class="at">· Semiz Hukuk Bürosu, Istanbul</span></h3>
         <p>I run the website, <a href="https://semizlaw.com">semizlaw.com</a>, and the technical infrastructure of my brothers' law firm.</p></div>
     </div>
@@ -168,10 +169,184 @@
     <p class="plain">AI, home lab and self-hosting, hardware, finance, books, sport.</p>
   </section>
 
+</div>
+<div class="cv" lang="de" hidden>
+  <header class="cv-head">
+    <div>
+      <h1>Muhammet Alparslan Semiz</h1>
+      <div class="role">Full-Stack-Entwickler · Informatik am KIT</div>
+    </div>
+    <div class="contact">
+      <a href="mailto:alparslansemiz@outlook.com">alparslansemiz@outlook.com</a><br>
+      <a href="https://www.linkedin.com/in/alparslansemiz/">linkedin.com/in/alparslansemiz</a><br>
+      <a href="https://github.com/AlparslanSemiz">github.com/AlparslanSemiz</a><br>
+      Karlsruhe, Deutschland
+    </div>
+  </header>
+
+  <p class="summary">Informatikstudent am KIT und Werkstudent bei Traggert. Ich arbeite in Backend, Frontend und DevOps: TypeScript, React und Next.js; Java und Spring Boot; Python und FastAPI.</p>
+
+  <section>
+    <h2>Berufserfahrung</h2>
+    <div class="row">
+      <div class="when mono">08/2026 - heute</div>
+      <div><h3>Full-Stack-Entwickler, Werkstudent <span class="at">· Traggert, Karlsruhe</span></h3>
+        <p>Startup. Backend, Frontend und DevOps.</p></div>
+    </div>
+    <div class="row">
+      <div class="when mono">05/2026 - heute</div>
+      <div><h3>Website und IT <span class="at">· Semiz Hukuk Bürosu, Istanbul</span></h3>
+        <p>Betreuung der Website <a href="https://semizlaw.com">semizlaw.com</a> und der technischen Infrastruktur der Anwaltskanzlei meiner Brüder.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Studentisches Engagement</h2>
+    <div class="row">
+      <div class="when mono">10/2025 - heute</div>
+      <div><h3>Entwickler <span class="at">· Delta, KIT</span></h3>
+        <p>Studentische Unternehmensberatung am KIT.</p>
+        <ul>
+          <li>Entwicklung von InvoiceFlow, Deltas interner Web-App für Rechnungen, im Dreierteam (10/2025 - 05/2026): konfigurierbare Formulare mit Next.js und React, tRPC-APIs, Prisma und PostgreSQL.</li>
+          <li>PDF-Export, Factur-X-XML, Archiv-Snapshots, Statusübergänge und fortlaufende Rechnungsnummern.</li>
+        </ul>
+        <div class="tech">Next.js · React · tRPC · Prisma · PostgreSQL</div></div>
+    </div>
+    <div class="row">
+      <div class="when mono">04/2026 - heute</div>
+      <div><h3>Entwickler <span class="at">· PionierGarage e.V., KIT</span></h3>
+        <p>Studentische Gründerinitiative am KIT. Außerdem im Eventteam von GROW, dem Startup-Programm der Initiative.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Teamprojekte</h2>
+    <div class="row">
+      <div class="when mono">05/2026 - heute</div>
+      <div><h3><a href="https://github.com/AlparslanSemiz/rate-my-professor">RateMyProf</a> <span class="at">· Praxis der Softwareentwicklung (PSE) am KIT, 6er-Team</span></h3>
+        <ul>
+          <li>Entwicklung der Admin-Web-App (React, TypeScript) einer Plattform zur Bewertung von Lehrveranstaltungen am KIT: Dashboards, Nutzerverwaltung, Fehlerberichte und Moderation.</li>
+          <li>Typisierte REST-Services mit Bearer-Token-Authentifizierung, geschützte Routen, Abmeldung bei 401 und umgebungsabhängige Konfiguration.</li>
+          <li>Android (Java): Dark Mode, Validierung von Fehlerberichten, Kontolöschung und Bereinigung gespeicherter Logins.</li>
+        </ul>
+        <div class="tech">React · TypeScript · Mantine · Java · Android · Spring Boot</div></div>
+    </div>
+    <div class="row">
+      <div class="when mono">03/2026 - heute</div>
+      <div><h3>I Am In The Library <span class="at">· mobile App, 3er-Team</span></h3>
+        <ul>
+          <li>Zeigt, welche Freunde gerade in der Bibliothek sind, mit Geofencing-Check-in und -Check-out über Expo Location, Supabase-RPCs und PostGIS.</li>
+          <li>Einstellungen, Benachrichtigungen, Theming, Fehlerberichte, Profilabläufe und Admin-Web-Anbindung.</li>
+        </ul>
+        <div class="tech">React Native · Expo · Supabase · PostGIS</div></div>
+    </div>
+    <div class="row">
+      <div class="when mono">24.-26.04.2026</div>
+      <div><h3><a href="https://github.com/AlparslanSemiz/lost-soul">Lost Soul</a> <span class="at">· 3-tägiger Hackathon am KIT (ClementineJam), 4er-Team</span></h3>
+        <ul>
+          <li>Gameplay-Programmierung eines 2D-Spiels mit Licht und Dunkelheit: Sprünge, Wandzonen, Dash-Abklingzeiten und Animations-Feedback.</li>
+          <li>Taschenlampe, Dunkelheit, Checkpoints, Heilzonen, Pickups, Gefahren und Szenenwechsel.</li>
+        </ul>
+        <div class="tech">Godot · GDScript</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Eigene Projekte</h2>
+    <div class="row">
+      <div class="when mono">06/2026 - heute</div>
+      <div><h3><a href="https://gamemetrix.me">GameMetrix</a></h3>
+        <p>Bündelt Spielebewertungen aus vielen Quellen in durchsuchbaren Katalogen, gewichtet nach Verlässlichkeit der Quellen. Betrieb mit Docker und nginx.</p>
+        <div class="tech">React · TypeScript · FastAPI · SQLAlchemy · Docker</div></div>
+    </div>
+    <div class="row">
+      <div class="when mono">Open Source</div>
+      <div><h3><a href="https://github.com/AlparslanSemiz/Mozaik">Mozaik</a></h3>
+        <p>Offline-Stundenplaner für Schulen in einer einzigen HTML-Datei, in fünf Sprachen. Über 600 Commits.</p>
+        <div class="tech">TypeScript</div></div>
+    </div>
+    <div class="row">
+      <div class="when mono">Open Source</div>
+      <div><h3><a href="https://github.com/AlparslanSemiz/Serit">Şerit</a> und <a href="https://github.com/AlparslanSemiz/Veda">Veda</a></h3>
+        <p>macOS-Werkzeuge: eine Touch-Bar-App, die sich selbst wiederherstellt, und eine App, die Programme beim Schließen des letzten Fensters beendet.</p>
+        <div class="tech">Swift · AppKit</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Ausbildung</h2>
+    <div class="row">
+      <div class="when mono">10/2024 - heute</div>
+      <div><h3>Karlsruher Institut für Technologie (KIT) <span class="at">· Karlsruhe</span></h3>
+        <p>B.Sc. Informatik, 5. Fachsemester. Schwerpunkte: Künstliche Intelligenz und Software-Engineering.</p></div>
+    </div>
+    <div class="row">
+      <div class="when mono">09/2019 - 06/2024</div>
+      <div><h3>Istanbul Erkek Lisesi <span class="at">· Istanbul, Türkei</span></h3>
+        <p>Deutsches Abitur und türkisches Abitur.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Auszeichnungen</h2>
+    <div class="row">
+      <div class="when mono">2019</div>
+      <div><h3>Landesweit Erster, LGS</h3>
+        <p>Zentrale Aufnahmeprüfung für weiterführende Schulen in der Türkei, unter mehr als einer Million Teilnehmenden.</p></div>
+    </div>
+    <div class="row">
+      <div class="when mono">2019</div>
+      <div><h3>TÜBİTAK-Forschungsprojekt</h3>
+        <p>Nationaler Forschungswettbewerb in Mathematik.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Kenntnisse</h2>
+    <dl class="kv">
+      <dt>Programmierung</dt><dd>Java, TypeScript, Python, SQL, Swift, Dart, GDScript, C</dd>
+      <dt>Frameworks</dt><dd>React, Next.js, tRPC, Mantine, React Native und Expo, Android, Flutter, Spring Boot, FastAPI, Godot</dd>
+      <dt>Werkzeuge</dt><dd>PostgreSQL, Prisma, Supabase, Docker, nginx, Git, GitHub Actions, GitLab CI, Claude Code</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Sprachen</h2>
+    <ul class="langs">
+      <li><b>Türkisch</b> Muttersprache</li>
+      <li><b>Deutsch</b> C2</li>
+      <li><b>Englisch</b> C1</li>
+      <li><b>Spanisch</b> A1</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Interessen</h2>
+    <p class="plain">KI, Homelab und Self-Hosting, Hardware, Finanzen, Bücher, Sport.</p>
+  </section>
+
+</div>
   <footer>
     <span>Muhammet Alparslan Semiz</span>
-    <span>Updated November 2026</span>
+    <span class="updated">Updated November 2026</span>
   </footer>
 </div>
+<script>
+(function(){
+  var cvs=document.querySelectorAll('.cv');
+  function show(l){
+    cvs.forEach(function(c){c.hidden=c.lang!==l});
+    document.documentElement.lang=l;
+    document.querySelectorAll('.tools [data-set]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.set===l)});
+    var u=document.querySelector('.updated'); if(u) u.textContent=l==='de'?'Stand: November 2026':'Updated November 2026';
+    document.title=l==='de'?'Alparslan Semiz · Lebenslauf':'Alparslan Semiz · CV';
+    try{localStorage.setItem('cv-lang',l)}catch(e){}
+  }
+  var start=location.hash==='#de'?'de':location.hash==='#en'?'en':null;
+  if(!start){try{start=localStorage.getItem('cv-lang')}catch(e){}}
+  show(start==='de'?'de':'en');
+  document.querySelectorAll('.tools [data-set]').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.set);history.replaceState(null,'','#'+b.dataset.set)})});
+})();
+</script>
 </body>
 </html>
