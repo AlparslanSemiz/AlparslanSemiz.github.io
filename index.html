@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alparslan Semiz</title>
+<meta name="description" content="Developer in Karlsruhe. Small, sharp tools for real people — timetables, inbox triage, macOS utilities.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23d9573f'/><text x='50' y='68' font-size='52' font-family='Georgia,serif' text-anchor='middle' fill='white'>A</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f3ee; --surface:#fffdf9; --ink:#1d1b18; --muted:#6b655c; --line:#e4ddd2;
+  --accent:#d9573f; --accent-soft:#f6e1da; --chip:#efe9df;
+  --shadow:0 1px 2px rgba(40,30,20,.05),0 8px 24px -12px rgba(40,30,20,.18);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141312; --surface:#1c1a18; --ink:#f0ebe3; --muted:#a59d91; --line:#2e2a26;
+  --accent:#f0785f; --accent-soft:#3a221c; --chip:#26231f;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
+}}
+:root[data-theme="dark"]{
+  --bg:#141312; --surface:#1c1a18; --ink:#f0ebe3; --muted:#a59d91; --line:#2e2a26;
+  --accent:#f0785f; --accent-soft:#3a221c; --chip:#26231f;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:28px 0}
+.mark{font:650 18px/1 Fraunces,Georgia,serif;text-decoration:none;letter-spacing:-.01em}
+.mark span{color:var(--accent)}
+nav a{font-size:14px;color:var(--muted);text-decoration:none;margin-left:22px}
+nav a:hover{color:var(--ink)}
+.hero{padding:72px 0 56px;border-bottom:1px solid var(--line)}
+.eyebrow{font:500 13px/1 "JetBrains Mono",monospace;color:var(--accent);letter-spacing:.04em;text-transform:uppercase}
+h1{font:500 clamp(38px,6.4vw,68px)/1.04 Fraunces,Georgia,serif;letter-spacing:-.025em;margin:18px 0 22px;max-width:15ch}
+h1 em{font-style:italic;color:var(--accent)}
+.lede{font-size:clamp(17px,2vw,19px);color:var(--muted);max-width:56ch}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;font-weight:500;font-size:15px;text-decoration:none;border:1px solid var(--line);background:var(--surface)}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn:hover{transform:translateY(-1px)}
+section{padding:64px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:28px;flex-wrap:wrap}
+h2{font:500 30px/1.15 Fraunces,Georgia,serif;letter-spacing:-.015em}
+.sec-head p{color:var(--muted);font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.card{position:relative;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow);text-decoration:none;transition:transform .18s,border-color .18s}
+.card:hover{transform:translateY(-3px);border-color:var(--accent)}
+.card.feature{grid-column:1/-1;display:grid;grid-template-columns:1.3fr 1fr;gap:28px;padding:32px}
+.card .k{font:500 12px/1 "JetBrains Mono",monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.card h3{font:600 22px/1.2 Fraunces,Georgia,serif;margin:10px 0 8px;letter-spacing:-.01em}
+.card.feature h3{font-size:34px}
+.card p{color:var(--muted);font-size:15px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:18px}
+.tags span{font:500 12px/1 "JetBrains Mono",monospace;background:var(--chip);padding:6px 9px;border-radius:7px;color:var(--ink)}
+.arrow{position:absolute;top:22px;right:22px;color:var(--muted);font-size:18px;transition:transform .18s,color .18s}
+.card:hover .arrow{transform:translate(3px,-3px);color:var(--accent)}
+.feature .facts{display:grid;gap:10px;align-content:start;border-left:1px solid var(--line);padding-left:28px}
+.facts div{display:flex;gap:10px;font-size:15px}
+.facts b{font:500 13px/1.6 "JetBrains Mono",monospace;color:var(--accent);min-width:22px}
+.stack{display:flex;flex-wrap:wrap;gap:10px}
+.stack span{padding:9px 14px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:14px}
+footer{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media (max-width:720px){
+  .card.feature{grid-template-columns:1fr;padding:24px}
+  .feature .facts{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:18px}
+  .card.feature h3{font-size:28px}
+  nav a{margin-left:14px}
+  .hero{padding:48px 0 40px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="#">Alparslan<span>.</span></a>
+    <nav><a href="#work">Work</a><a href="#stack">Stack</a><a href="https://github.com/AlparslanSemiz">GitHub</a></nav>
+  </header>
+
+  <div class="hero">
+    <div class="eyebrow">Developer · Karlsruhe</div>
+    <h1>Small, sharp tools for <em>real</em> people.</h1>
+    <p class="lede">I build software that answers to someone specific — a timetable app for my father's course, a bot that reads my inbox so I don't have to, a macOS utility when the existing ones stopped working. Mostly TypeScript and Python, some Swift.</p>
+    <div class="cta">
+      <a class="btn primary" href="#work">See the work ↓</a>
+      <a class="btn" href="https://github.com/AlparslanSemiz">GitHub profile ↗</a>
+    </div>
+  </div>
+
+  <section id="work">
+    <div class="sec-head"><h2>Selected work</h2><p>Everything here is open source.</p></div>
+    <div class="grid">
+
+      <a class="card feature" href="https://github.com/AlparslanSemiz/Mozaik">
+        <span class="arrow">↗</span>
+        <div>
+          <div class="k">Featured · TypeScript</div>
+          <h3>Mozaik</h3>
+          <p>A single-file school timetable builder that replaces aSc Timetables for one private course. It does about half of what aSc does — and aims to do that half better. No installer, no server, no account; works offline in five languages.</p>
+          <div class="tags"><span>TypeScript</span><span>offline-first</span><span>single-file</span><span>i18n</span></div>
+        </div>
+        <div class="facts">
+          <div><b>01</b><span>Built for one real user: my father, who lays out the timetable by hand every term.</span></div>
+          <div><b>02</b><span>Ships as one HTML file, a Windows .exe and a web app.</span></div>
+          <div><b>03</b><span>600+ commits of iteration on a single focused problem.</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="https://github.com/AlparslanSemiz/Gamemetrix">
+        <span class="arrow">↗</span>
+        <div class="k">Full-stack</div>
+        <h3>GameMetrix</h3>
+        <p>A game decision catalog: FastAPI and PostgreSQL behind a server-rendered React Router frontend, with a scoring pipeline and background jobs.</p>
+        <div class="tags"><span>FastAPI</span><span>PostgreSQL</span><span>React</span><span>Docker</span></div>
+      </a>
+
+      <a class="card" href="https://github.com/AlparslanSemiz/mail-triage-bot">
+        <span class="arrow">↗</span>
+        <div class="k">AI · Automation</div>
+        <h3>Mail Triage Bot</h3>
+        <p>Polls Outlook hourly, lets Gemini classify each new mail, pings Telegram for anything urgent and sends a digest at 09:00 and 18:00.</p>
+        <div class="tags"><span>Next.js</span><span>Gemini</span><span>MS Graph</span><span>Telegram</span></div>
+      </a>
+
+      <a class="card" href="https://github.com/AlparslanSemiz/Veda">
+        <span class="arrow">↗</span>
+        <div class="k">macOS · Swift</div>
+        <h3>Veda</h3>
+        <p>Quits a Mac app when its last window closes — like Windows does. Built when Swift Quit and Last Window Quits broke on new macOS; tells closed, minimized and other-Space windows apart.</p>
+        <div class="tags"><span>Swift</span><span>AppKit</span><span>Accessibility API</span></div>
+      </a>
+
+      <a class="card" href="https://github.com/AlparslanSemiz/InvoiceFlow">
+        <span class="arrow">↗</span>
+        <div class="k">Team project · KIT</div>
+        <h3>InvoiceFlow</h3>
+        <p>Full-stack invoice management (PDF and XML) built in a four-person team at Delta Hochschulgruppe. I worked on XML-driven UI, data logic and PDF layouts.</p>
+        <div class="tags"><span>T3 Stack</span><span>Next.js</span><span>Tailwind</span></div>
+      </a>
+
+      <a class="card" href="https://github.com/AlparslanSemiz/priceSniper">
+        <span class="arrow">↗</span>
+        <div class="k">Python · Scraping</div>
+        <h3>PriceSniper</h3>
+        <p>Tracks electronics prices on Geizhals.de and Kleinanzeigen.de with Playwright, on a schedule, and raises alerts when a product drops into range.</p>
+        <div class="tags"><span>Python</span><span>Playwright</span><span>APScheduler</span></div>
+      </a>
+
+      <a class="card" href="https://github.com/AlparslanSemiz/namaz-vakti-widget">
+        <span class="arrow">↗</span>
+        <div class="k">Widget</div>
+        <h3>Namaz Vakti</h3>
+        <p>A macOS/iOS widget that shows prayer times for wherever you are, with one network request a day and no API keys.</p>
+        <div class="tags"><span>JavaScript</span><span>ScriptWidget</span></div>
+      </a>
+
+    </div>
+  </section>
+
+  <section id="stack">
+    <div class="sec-head"><h2>What I work with</h2></div>
+    <div class="stack">
+      <span>TypeScript</span><span>Python</span><span>Swift</span><span>React</span><span>Next.js</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span><span>Playwright</span><span>Godot</span><span>Unity</span>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Alparslan Semiz</span>
+    <a href="https://github.com/AlparslanSemiz">github.com/AlparslanSemiz</a>
+  </footer>
+</div>
+</body>
+</html>
