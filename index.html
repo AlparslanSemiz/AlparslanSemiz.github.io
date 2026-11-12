@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Alparslan Semiz</title>
-<meta name="description" content="Computer science student at KIT and full-stack developer at Traggert in Karlsruhe.">
+<title>Alparslan Semiz · CV</title>
+<meta name="description" content="Alparslan Semiz: computer science student at KIT and full-stack developer at Traggert in Karlsruhe.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23c2410c'/><text x='50' y='69' font-size='56' font-family='Georgia,serif' text-anchor='middle' fill='white'>a</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,111 +12,140 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<button class="save" onclick="window.print()">Save as PDF</button>
 <div class="wrap">
-  <header class="top">
-    <a class="name" href="./">Alparslan Semiz</a>
-    <nav><a href="#projects">Projects</a><a href="cv.html">CV</a><a href="https://github.com/AlparslanSemiz">GitHub</a></nav>
+  <header class="cv-head">
+    <div>
+      <h1>Muhammet Alparslan Semiz</h1>
+      <div class="role">Full-Stack Developer · Computer Science at KIT</div>
+    </div>
+    <div class="contact">
+      <a href="mailto:alparslansemiz@outlook.com">alparslansemiz@outlook.com</a><br>
+      <a href="https://www.linkedin.com/in/alparslansemiz/">linkedin.com/in/alparslansemiz</a><br>
+      <a href="https://github.com/AlparslanSemiz">github.com/AlparslanSemiz</a><br>
+      Karlsruhe, Germany
+    </div>
   </header>
 
-  <div class="lead">
-    <h1>I build software that people around me actually use.</h1>
-    <p>I'm a computer science student at KIT and a full-stack developer at <a href="https://traggert.com">Traggert</a>, a startup in Karlsruhe. Next to my studies I build software for <a href="https://pioniergarage.de">PionierGarage</a>, KIT's entrepreneurship club, and for Delta, a student consulting group. I also run the website and technical infrastructure of my brothers' law firm in Istanbul.</p>
-    <p>Most of my own projects start with a real problem. My father plans his course's timetable by hand every term, so I wrote him <a href="https://github.com/AlparslanSemiz/Mozaik">Mozaik</a>. My inbox was too full, so a bot now sorts it for me. When the Mac utilities I relied on stopped working, I wrote my own.</p>
-    <p class="note">Now: fifth semester, full-stack work at Traggert, and a Touch Bar app because Pock kept going blank.</p>
-  </div>
+  <p class="summary">Computer science student at the Karlsruhe Institute of Technology, working as a full-stack developer at Traggert. I build web and mobile apps with TypeScript, React and Next.js, backends with Java and Spring Boot or Python and FastAPI, and small macOS tools in Swift.</p>
 
   <section>
-    <h2>Work</h2>
+    <h2>Experience</h2>
     <div class="row">
-      <div class="when mono">Aug 2026 - now</div>
-      <div><h3>Full-Stack Developer <span class="at">· Traggert</span></h3><p>Startup in Karlsruhe. Backend, web frontend and the mobile app.</p></div>
+      <div class="when mono">Aug 2026 - Present</div>
+      <div><h3>Full-Stack Developer <span class="at">· Traggert, Karlsruhe</span></h3>
+        <p>Startup. Backend, web frontend and the mobile app.</p></div>
     </div>
     <div class="row">
-      <div class="when mono">Apr 2026 - now</div>
-      <div><h3>Developer <span class="at">· PionierGarage</span></h3><p>KIT's student entrepreneurship club. Also in the event team of GROW, the club's startup programme.</p></div>
+      <div class="when mono">Apr 2026 - Present</div>
+      <div><h3>Developer <span class="at">· PionierGarage e.V., KIT</span></h3>
+        <p>Student entrepreneurship club. Also in the event team of GROW, the club's startup programme, organising workshops and networking events for founders.</p></div>
     </div>
     <div class="row">
-      <div class="when mono">Oct 2025 - now</div>
-      <div><h3>Developer <span class="at">· Delta</span></h3><p>Student consulting group at KIT. With two others I built <a href="https://github.com/AlparslanSemiz/InvoiceFlow">InvoiceFlow</a>, Delta's internal invoicing app with PDF export and Factur-X XML.</p></div>
+      <div class="when mono">Oct 2025 - Present</div>
+      <div><h3>Developer <span class="at">· Delta, KIT</span></h3>
+        <p>Student consulting group (studentische Unternehmensberatung).</p>
+        <ul>
+          <li>Built InvoiceFlow, Delta's internal invoicing web app, in a team of three (Oct 2025 - May 2026): configurable Next.js and React forms, tRPC APIs, Prisma and PostgreSQL.</li>
+          <li>PDF export, Factur-X XML, archival snapshots, status transitions and sequence-based invoice numbering.</li>
+        </ul>
+        <div class="tech">Next.js · React · tRPC · Prisma · PostgreSQL</div></div>
     </div>
     <div class="row">
-      <div class="when mono">ongoing</div>
-      <div><h3>Website and IT <span class="at">· Semiz Hukuk Bürosu, Istanbul</span></h3><p>I run the website, <a href="https://semizlaw.com">semizlaw.com</a>, and the technical infrastructure of my brothers' law firm.</p></div>
+      <div class="when mono">Ongoing</div>
+      <div><h3>Website and IT <span class="at">· Semiz Hukuk Bürosu, Istanbul</span></h3>
+        <p>I run the website, <a href="https://semizlaw.com">semizlaw.com</a>, and the technical infrastructure of my brothers' law firm.</p></div>
     </div>
-    <p class="links"><a href="cv.html">Full CV</a></p>
   </section>
 
-  <section id="projects">
+  <section>
     <h2>Projects</h2>
     <div class="row">
-      <div class="when mono">macOS</div>
-      <div><h3><a href="https://github.com/AlparslanSemiz/Serit">Şerit</a></h3><p>A Touch Bar app that puts itself back when macOS takes the bar away: open apps, now playing, volume, brightness, weather.</p></div>
+      <div class="when mono">May 2026 - Present</div>
+      <div><h3><a href="https://github.com/AlparslanSemiz/rate-my-professor">RateMyProf</a> <span class="at">· KIT software engineering course (PSE), team of 6</span></h3>
+        <ul>
+          <li>Built the React and TypeScript admin app of a KIT professor-rating platform: dashboards, users, bug reports and moderation.</li>
+          <li>Typed REST services with bearer-token auth, protected routes, 401 logout handling and environment-based configuration.</li>
+          <li>Android (Java): dark mode, bug-report validation, account deletion and stored-login cleanup.</li>
+        </ul>
+        <div class="tech">React · TypeScript · Mantine · Java · Android · Spring Boot</div></div>
     </div>
     <div class="row">
-      <div class="when mono">macOS</div>
-      <div><h3><a href="https://github.com/AlparslanSemiz/Veda">Veda</a></h3><p>Quits a Mac app when you close its last window, the way Windows does.</p></div>
+      <div class="when mono">Mar 2026 - Present</div>
+      <div><h3>I Am In The Library <span class="at">· mobile app, team of 3</span></h3>
+        <ul>
+          <li>Shows which friends are in the library right now, with geofenced check-in and check-out using Expo Location, Supabase RPCs and PostGIS.</li>
+          <li>Settings, notifications, theming, bug reports, profile workflows and admin-web support.</li>
+        </ul>
+        <div class="tech">React Native · Expo · Supabase · PostGIS</div></div>
     </div>
     <div class="row">
-      <div class="when mono">web</div>
-      <div><h3><a href="https://github.com/AlparslanSemiz/Mozaik">Mozaik</a></h3><p>An offline school timetable builder in one HTML file, in five languages. 600+ commits.</p></div>
+      <div class="when mono">Jun 2026 - Present</div>
+      <div><h3><a href="https://gamemetrix.me">GameMetrix</a> <span class="at">· personal project</span></h3>
+        <ul>
+          <li>Aggregates game scores from multiple sources into searchable catalogs and game pages.</li>
+          <li>Reliability-adjusted scoring based on source coverage; deployed with Docker and nginx.</li>
+        </ul>
+        <div class="tech">React · TypeScript · FastAPI · SQLAlchemy · Docker</div></div>
     </div>
     <div class="row">
-      <div class="when mono">web</div>
-      <div><h3><a href="https://gamemetrix.me">GameMetrix</a></h3><p>Game scores from many sources, weighted by how reliable each source is.</p></div>
+      <div class="when mono">24-26 Apr 2026</div>
+      <div><h3><a href="https://github.com/AlparslanSemiz/lost-soul">Lost Soul</a> <span class="at">· 3-day hackathon at KIT (ClementineJam), team of 4</span></h3>
+        <ul>
+          <li>Gameplay programmer for a dark-and-light 2D game: jumps, wall zones, dash cooldowns and animation feedback.</li>
+          <li>Flashlight, darkness, checkpoints, healing zones, pickups, hazards and scene transitions.</li>
+        </ul>
+        <div class="tech">Godot · GDScript</div></div>
     </div>
     <div class="row">
-      <div class="when mono">automation</div>
-      <div><h3><a href="https://github.com/AlparslanSemiz/mail-triage-bot">Mail Triage Bot</a></h3><p>Gemini sorts new Outlook mail; Telegram gets the urgent ones and a digest twice a day.</p></div>
-    </div>
-    <div class="row">
-      <div class="when mono">games</div>
-      <div><h3><a href="https://github.com/AlparslanSemiz/godot-mobile-template">Godot Mobile Template</a></h3><p>A starting point for mobile games with headless tests and smoke runs in CI.</p></div>
-    </div>
-    <div class="row">
-      <div class="when mono">small things</div>
-      <div><h3><a href="https://github.com/AlparslanSemiz/priceSniper">PriceSniper</a> <span class="at">and</span> <a href="https://github.com/AlparslanSemiz/namaz-vakti-widget">Namaz Vakti</a></h3><p>A price watcher for Geizhals and Kleinanzeigen, and a prayer times widget.</p></div>
+      <div class="when mono">Open source</div>
+      <div><h3><a href="https://github.com/AlparslanSemiz/Mozaik">Mozaik</a>, <a href="https://github.com/AlparslanSemiz/Serit">Şerit</a>, <a href="https://github.com/AlparslanSemiz/Veda">Veda</a></h3>
+        <p>An offline school timetable builder in one HTML file (600+ commits), a Touch Bar app for macOS, and an app that quits programs when their last window closes.</p>
+        <div class="tech">TypeScript · Swift</div></div>
     </div>
   </section>
 
   <section>
-    <h2>With teams</h2>
+    <h2>Education</h2>
     <div class="row">
-      <div class="when mono">May 2026 - now</div>
-      <div><h3><a href="https://github.com/AlparslanSemiz/rate-my-professor">RateMyProf</a> <span class="at">· KIT, team of 6</span></h3><p>Professor ratings for KIT students: Android app, Spring Boot API and a web admin panel. I built the admin panel and settings features in the Android app.</p></div>
+      <div class="when mono">Oct 2024 - Present</div>
+      <div><h3>B.Sc. Computer Science (Informatik) <span class="at">· Karlsruhe Institute of Technology</span></h3>
+        <p>Focus on artificial intelligence and software engineering.</p></div>
     </div>
     <div class="row">
-      <div class="when mono">Mar 2026 - now</div>
-      <div><h3>I Am In The Library <span class="at">· team of 3</span></h3><p>Shows which friends are in the library right now, with geofenced check-ins. React Native, Supabase, PostGIS.</p></div>
-    </div>
-    <div class="row">
-      <div class="when mono">Apr 2026</div>
-      <div><h3><a href="https://github.com/AlparslanSemiz/lost-soul">Lost Soul</a> <span class="at">· 3-day hackathon at KIT, team of 4</span></h3><p>A dark-and-light platformer. I wrote the gameplay: movement, dash, the flashlight and darkness, checkpoints.</p></div>
+      <div class="when mono">Sep 2019 - Jun 2024</div>
+      <div><h3>German Abitur and Turkish high school diploma <span class="at">· Istanbul Erkek Lisesi</span></h3>
+        <p>First place nationwide in LGS 2019, Turkey's central high-school entrance exam, among more than one million candidates.</p></div>
     </div>
   </section>
 
   <section>
-    <h2>Contact</h2>
-    <div class="links">
-      <button class="link" data-u="alparslansemiz" data-d="outlook.com">Email</button>
-      <a href="https://www.linkedin.com/in/alparslansemiz/">LinkedIn</a>
-      <a href="https://github.com/AlparslanSemiz">GitHub</a>
-      <a href="cv.html">CV</a>
+    <h2>Volunteering and awards</h2>
+    <div class="row">
+      <div class="when mono">Nov 2025 - Present</div>
+      <div><h3>Mentor <span class="at">· Noctisol</span></h3><p>A non-profit that helps international students make their way to Germany.</p></div>
     </div>
+    <div class="row">
+      <div class="when mono">Jun 2019</div>
+      <div><h3>TÜBİTAK research project <span class="at">· national research competition in mathematics</span></h3></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills and languages</h2>
+    <dl class="kv">
+      <dt>Programming</dt><dd>Java, TypeScript, Python, SQL, Swift, Dart, GDScript, C</dd>
+      <dt>Frameworks</dt><dd>React, Next.js, tRPC, Mantine, React Native and Expo, Android, Flutter, Spring Boot, FastAPI, Godot</dd>
+      <dt>Tools</dt><dd>PostgreSQL, Prisma, Supabase, Docker, nginx, Git, GitHub Actions, GitLab CI, Claude Code</dd>
+      <dt>Languages</dt><dd>Turkish (native), German (C2), English (C1), Spanish (A1)</dd>
+      <dt>Interests</dt><dd>AI, home lab and self-hosting, hardware, finance, books, sport</dd>
+    </dl>
   </section>
 
   <footer>
-    <span>Karlsruhe and Istanbul</span>
-    <span>HTML and CSS, no framework</span>
+    <span>Muhammet Alparslan Semiz</span>
+    <span>Updated November 2026</span>
   </footer>
 </div>
-<script>
-document.querySelectorAll('button.link').forEach(function(b){
-  var addr=b.dataset.u+'@'+b.dataset.d, label=b.textContent;
-  b.addEventListener('click',function(){
-    var done=function(){b.textContent='Copied: '+addr;setTimeout(function(){b.textContent=label},2400)};
-    if(navigator.clipboard){navigator.clipboard.writeText(addr).then(done,function(){location.href='mailto:'+addr})}else{location.href='mailto:'+addr}
-  });
-});
-</script>
 </body>
 </html>
